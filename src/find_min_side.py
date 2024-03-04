@@ -1,9 +1,10 @@
-def min_long(n: int, w: int, h: int) -> int:
-    area = w * h
-    temp_w, temp_h = w, h
-    while (temp_w * temp_h) / area < n:
-        if temp_h + h >= temp_w + w:
-            temp_w += w
+def find_min_side(number_notes: int, width: int, height: int) -> int:
+    area = width * height
+    temp_width, temp_height = width, height
+    while (temp_width * temp_height) / area < number_notes:
+        if temp_height + height >= temp_width + width:
+            temp_width += width
         else:
-            temp_h += h
-    return max(temp_w, temp_h)
+            temp_height += height
+    return max(temp_width, temp_height)
+
