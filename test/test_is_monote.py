@@ -1,5 +1,6 @@
 import unittest
-from lab1 import is_monotone
+from src.is_monotone import *
+
 
 class TestIsMonotone(unittest.TestCase):
     def test_increasing_sequence(self):
@@ -26,6 +27,7 @@ class TestIsMonotone(unittest.TestCase):
         arr = [5, 4, 3, 2, 1, 2, 3, 4, 5]
         result = is_monotone(arr)
         self.assertEqual(result, False)
+
 
 if __name__ == "__main__":
     unittest.main()
