@@ -33,14 +33,10 @@ def get_color(matrix, coordinate):
 
 
 def flood_fill(matrix, start_point, replacement_color):
-    print(matrix)
-    if matrix[0] == [""]:
-        return -1
-    x, y = start_point[0], start_point[1]
-    queue = [[x, y]]
+    queue = [start_point]
     target_color = get_color(matrix, start_point)
     if target_color == replacement_color:
-        return -1
+        return matrix
 
     while queue:
         rows, cols = queue.pop(0)
@@ -56,4 +52,4 @@ def flood_fill(matrix, start_point, replacement_color):
     return matrix
 
 
-read_input("../resource/input.txt", "../resource/output.txt")
+read_input("../resource/input_same_color.txt", "../resource/output_same_color.txt")
