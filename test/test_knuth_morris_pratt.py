@@ -12,8 +12,8 @@ class TestFindPatternInString(unittest.TestCase):
         self.assertEqual(result, 0)
 
     def test_long_pattern_found(self):
-        result = knuth_morris_pratt_search("abcabcabcabc", "abcabc")
-        self.assertEqual(result, 0)
+        result = knuth_morris_pratt_search("abcabcabcab", "bcabc")
+        self.assertEqual(result, 1)
 
     def test_long_pattern_not_found(self):
         result = knuth_morris_pratt_search("abcabcabcabc", "abcd")
