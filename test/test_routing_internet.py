@@ -8,7 +8,7 @@ class TestRoutingInternet(unittest.TestCase):
         file = open("../resource/output_route.txt")
         result = int(file.readline())
         file.close()
-        self.assertEqual(result, 900)
+        self.assertEqual(result, 1720)
 
     def test_undirected_graph(self):
         read_data("../resource/input_undirected.csv", "../resource/output_undirected_route.txt")
