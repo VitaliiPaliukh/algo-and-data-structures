@@ -15,7 +15,7 @@ def build_prefix_suffix_array(pattern):
                 prefix_suffix[pattern_index] = 0
                 pattern_index += 1
     return prefix_suffix
-    
+
 
 def knuth_morris_pratt_search(string, pattern):
     index_in_string, index_in_pattern = 0, 0
