@@ -25,6 +25,7 @@ def write_output(output_file_direction, matrix):
     else:
         for i in matrix:
             file_write.write(str(i)+"\n")
+    file_write.close()
 
 
 def get_color(matrix, coordinate):
